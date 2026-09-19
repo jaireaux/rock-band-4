@@ -23,6 +23,6 @@ The build enforces unique artist/song pairs, year bounds and SQLite integrity. `
 
 ## Deployment
 
-Upload `public/rb4.php` to the web root’s `jaireaux/` directory. Put `catalog.sqlite` in `rb4-data/` alongside the web root (outside the public directory), or set `RB4_DATABASE` to an absolute path. Keep the database readable by PHP. Upload a new database under a temporary name, validate it, then rename atomically when updating. The site is read-only and does not expose a database-management interface.
+Upload `public/rb4.php` to the web root’s `jaireaux/` directory. Put `catalog.sqlite` in `jaireaux/rb4-data/` together with the supplied `.htaccess` (Require all denied), or set `RB4_DATABASE` to an absolute path outside the web root if your host permits it. Verify direct HTTP access is forbidden before deployment. Keep the database readable by PHP. Upload a new database under a temporary name, validate it, then rename atomically when updating. The site is read-only and does not expose a database-management interface.
 
 The page requests no search-engine indexing; its URL and source are public.

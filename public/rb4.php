@@ -1,5 +1,5 @@
 <?php
-$dbPath = getenv('RB4_DATABASE') ?: dirname(__DIR__, 2) . '/rb4-data/catalog.sqlite';
+$dbPath = getenv('RB4_DATABASE') ?: __DIR__ . '/rb4-data/catalog.sqlite';
 try {
     if (!is_file($dbPath)) throw new RuntimeException('Catalog unavailable');
     $db = new PDO('sqlite:' . $dbPath, null, null, [PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION]);
